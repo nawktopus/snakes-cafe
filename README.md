@@ -1,4 +1,4 @@
-LAB - Class Python4d20
+LAB - Class Python401d20
 Project: snakes-cafe
 Author: Jordan Kwan
 Links and Resources
