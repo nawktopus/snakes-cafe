@@ -40,13 +40,15 @@ def menu():
     order = input("> ")
     if order in order_tab:
         order_tab[order] += 1
+    elif order == "quit":
+        exit()
     else:
         order_tab[order] = 1
-    print(f"You've added {order_tab[order]} {order}")
+    print(f"You've added {order_tab[order]} {order}!")
 
     repeat = True
     while repeat:
-        print("Would you like to add another item?")
+        print("Would you like to add another item? (y/n)")
         choice = input("> ")
         if choice == "y":
             print("What would you like to order?")
@@ -56,21 +58,12 @@ def menu():
                 order_tab[order] += 1
             else:
                 order_tab[order] = 1
-            print(f"You've added {order_tab[order]} {order}")
-        else:
-            break
-    print(f"Your order consists of {order_tab}")
-
-def leave():
-    again = True
-    while again:
-        print("Would you like to leave?")
-        answer = input("> ")
-        if answer == "quit":
+            print(f"You've added {order_tab[order]} {order}!")
+        elif choice == "quit":
             exit()
         else:
-            print("What would you like to order?")
-            menu()
+            break
+    print(f"Your order consists of {order_tab[order]} {order}!")
+
 menu()
-leave()
 
